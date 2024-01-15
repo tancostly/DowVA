@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function date_update(){
+            const d = new Date();
+            let day = d.getDate()
+            const months = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
+            let month = months[d.getMonth()];
+            let year = d.getFullYear()
+            let hour = d.getHours()
+            let minute = d.getMinutes()
+            let second = d.getSeconds()
+            if (hour   < 10) {hour   = "0"+hour;}
+            if (minute < 10) {minute = "0"+minute;}
+            if (second < 10) {second = "0"+second;}
+            document.getElementById("date").innerHTML = day + " " + month + " " + year + " ("+hour+":"+minute+":"+second+")";
+        }
+        </script>
+</head>
+<body onload="date_update(); setInterval('date_update()', 1000 )">
+    <div class="header"><img src="photos/header.jpg" alt=""></div>
+    <div class="vid"><video autoplay muted loop id="myVideo"><source src="photos/main2.mp4" type="video/mp4"></video></div>
+    <div class="date_background"><span id="date"></span></div>
+    <div class="id_data"><img src="photos/02_3.png" alt=""></div>
+    <div class="element_3"><img src="photos/03.png" alt=""></div>
+    <div class="element_4"><img src="photos/04.png" alt=""></div>
+    <div class="element_5"><img src="photos/05.png" alt=""></div>
+    <div class="footer"><img src="photos/footer.jpg" alt=""></div>
+
+</body>
+</html>
