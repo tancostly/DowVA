@@ -23,6 +23,7 @@ body {
   margin-top: 40px;
   width: 100%;
   margin-left: -3px;
+  background-color: white;
 }
 /* .date_background{
     margin-top: -40px;
@@ -36,12 +37,11 @@ body {
   color: black;
   font-weight: 600;
   position: relative;
-  top: -100px;
+  top: -50px;
   padding-bottom: 25px;
-  border-bottom: 13px solid white;
 }
 .date_background span {
-  font-size: 12px;
+  font-size: 14px;
   font-family: sans-serif;
   font-weight: bold;
   display: flex;
